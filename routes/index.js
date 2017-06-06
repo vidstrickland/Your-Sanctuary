@@ -32,7 +32,12 @@ router.get("/login", function (req, res){
 
 //show admin tools
 router.get("/admin", function(req, res){
-        res.render("admin");
+    sanctDescription.find({},{},function(err,sanctuaryDesc){
+        res.render("admin", {
+            "sanctuaryDesc1" : sanctuaryDesc,
+            "sanctuaryDesc2" : sanctuaryDesc
+        });
+    });
 });
 
 //admin logic
