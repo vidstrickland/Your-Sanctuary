@@ -11,11 +11,11 @@ router.get("/", function(req, res){
     sanctDescription1.find({},{},function(err,sanctuaryDesc1){
         sanctDescription2.find({},{},function(err,sanctuaryDesc2){
         res.render("landing.ejs", {
-            
             "sanctuaryDesc1" : sanctuaryDesc1,
             "sanctuaryDesc2" : sanctuaryDesc2,
             })
-        });
+        })
+    });
 });
 
 //About Route
