@@ -4,4 +4,4 @@ var sanctuaryDescSchema = new mongoose.Schema({
     sanctuaryDesc1: String
 });
 
-module.exports = mongoose.model("sanctuaryDesc", sanctuaryDescSchema);
+module.exports = mongoose.model("sanctuaryDesc1", sanctuaryDescSchema);
