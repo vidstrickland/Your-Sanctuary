@@ -19,6 +19,8 @@ router.get("/", function(req, res){
                     res.render("landing.ejs", {
                         "sanctuaryDesc1" : sanctuaryDesc1,
                         "sanctuaryDesc2" : sanctuaryDesc2,
+                        "sanctuaryDesc3" : sanctuaryDesc3,
+                        "sanctuaryDesc4" : sanctuaryDesc4,
                         })
                     })
                 })
