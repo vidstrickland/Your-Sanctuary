@@ -7,4 +7,12 @@ var express         = require("express"),
     sanctuaryDesc2  = require("./models/sanctuaryDesc2"),
     methodOverride  = require("method-override");
 
-console.log(process.env.ip);
+//requiring routes
+var indexRoutes = require("./routes/index");
+
+
+app.use(bodyParser.urlencoded({extended:true}));
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"))
+app.use(methodOverride("_method"));
+app.use(flash());
