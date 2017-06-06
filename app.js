@@ -3,7 +3,7 @@ var express         = require("express"),
     bodyParser      = require("body-parser"),
     flash           = require("connect-flash"),
     mongoose        = require("mongoose"),
-    sanctuaryDesc1  = require("./models/sanctuaryDesc"),
+    sanctuaryDesc  = require("./models/sanctuaryDesc"),
     methodOverride  = require("method-override");
 
 //requiring routes
@@ -13,6 +13,12 @@ var indexRoutes = require("./routes/index");
 var url = process.env.DATABASEURL
 mongoose.connect(url);
 
+var milkyWell = new sanctuaryDesc({
+    sanctuaryDesc1: "Milky",
+    sanctuaryDesc2: "Well"
+});
+
+milkyWell.save();
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
