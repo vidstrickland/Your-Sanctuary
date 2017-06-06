@@ -7,16 +7,14 @@ var sanctDescription2 = require("../models/sanctuaryDesc2");
 //test
 
 //Root Route
-router.get("/", function(req, res){
-    sanctDescription1.find({},{},function(err,sanctuaryDesc1){
-        res.render("landing.ejs", {
-            "sanctuaryDesc1" : sanctuaryDesc1,
-        });
-    })
-    sanctDescription2.find({},{},function(err,sanctuaryDesc2){
-        res.render("landing.ejs", {
-            "sanctuaryDesc2" : sanctuaryDesc2,
-        });
+    router.get("/", function(req, res){
+        sanctDescription1.find({},{},function(err,sanctuaryDesc1){
+            sanctDescription2.find({},{},function(err,sanctDescription2){
+                res.render("landing", {
+                    "sanctuaryDesc1" : sanctuaryDesc1,
+                    "sanctuaryDesc2" : sanctuaryDesc2
+            })
+        })
     })
 });
 
