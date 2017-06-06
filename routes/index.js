@@ -30,15 +30,22 @@ router.get("/login", function (req, res){
     res.render("login");
 });
 
-/*
+//show admin tools
+router.get("/admin", function(req, res){
+        res.render("admin");
+});
+
 //admin logic
 router.post("/admin", function(req, res){
-    var newDPCost = new DPCost({currentDPCost: req.body.dpcost});
-    DPCost.update({currentDPCost: req.body.dpcost});
-    newDPCost.save();
-   console.log(req.body.dpcost);
+    var newDesc1 = new sanctuaryDesc({
+        sanctuaryDesc1: req.body.sanctuaryDesc1,
+        sanctuaryDesc2: req.body.sanctuaryDesc2,
+    });
+    
+    //sanctDescription.update({currentDPCost: req.body.dpcost});
+    newDesc1.save();
+   //console.log(req.body.dpcost);
    res.redirect("/admin");
 });
-*/
 
 module.exports = router;
