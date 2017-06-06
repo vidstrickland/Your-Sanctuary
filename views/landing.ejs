@@ -1,5 +1,6 @@
 <% include partials/header %>
 <p>Welcome to Your Sanctuary!</p>
-<%var randomDesc1 = Math.floor( Math.random() * sanctuaryDesc1.length-1 )%>
-    <p><strong><%= sanctuaryDesc1[randomDesc1].sanctuaryDesc1 %> <%= sanctuaryDesc2[sanctuaryDesc2.length-1].sanctuaryDesc2 %>!</strong></p>
+<%var randomDesc1 = Math.floor( Math.random() * sanctuaryDesc1.length )%>
+<%var randomDesc2 = Math.floor( Math.random() * sanctuaryDesc2.length )%>
+    <p><strong><%= sanctuaryDesc1[randomDesc1].sanctuaryDesc1 %> <%= sanctuaryDesc2[randomDesc2].sanctuaryDesc2 %>!</strong></p>
 <% include partials/footer %>
