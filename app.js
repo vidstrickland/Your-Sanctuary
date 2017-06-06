@@ -10,6 +10,10 @@ var express         = require("express"),
 //requiring routes
 var indexRoutes = require("./routes/index");
 
+//database url
+var url = process.env.DATABASEURL
+mongoose.connect(url);
+
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");

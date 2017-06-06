@@ -1,12 +1,18 @@
 var express = require("express");
 var router          = express.Router();
 var mongoose        = require("mongoose");
+var sanctDescription = require("../models/sanctuaryDesc");
 //var User            = require("../models/user");
 //test
 
 //Root Route
 router.get("/", function(req, res){
-    res.render("landing.ejs");
+    sanctDescription.find({},{},function(err,sanctuaryDesc){
+        res.render("landing.ejs", {
+            "sanctuaryDesc1" : sanctuaryDesc,
+            "sanctuaryDesc2" : sanctuaryDesc
+        });
+    })
 });
 
 //About Route
