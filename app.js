@@ -13,13 +13,6 @@ var indexRoutes = require("./routes/index");
 var url = process.env.DATABASEURL
 mongoose.connect(url);
 
-var milkyWell = new sanctuaryDesc({
-    sanctuaryDesc1: "Milky",
-    sanctuaryDesc2: "Well"
-});
-
-milkyWell.save();
-
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"))
