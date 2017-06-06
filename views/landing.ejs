@@ -2,5 +2,10 @@
 <p>Welcome to Your Sanctuary!</p>
 <%var randomDesc1 = Math.floor( Math.random() * sanctuaryDesc1.length )%>
 <%var randomDesc2 = Math.floor( Math.random() * sanctuaryDesc2.length )%>
-    <p><strong><%= sanctuaryDesc1[randomDesc1].sanctuaryDesc1 %> <%= sanctuaryDesc2[randomDesc2].sanctuaryDesc2 %>!</strong></p>
+<%var randomDesc3 = Math.floor( Math.random() * sanctuaryDesc3.length )%>
+<%var randomDesc4 = Math.floor( Math.random() * sanctuaryDesc4.length )%>
+
+    <p><strong>Ness <%= sanctuaryDesc3[randomDesc3].sanctuaryDesc3 %> <%= sanctuaryDesc4[randomDesc4].sanctuaryDesc4 %>.</strong></p>
+    <p><strong>Ness's Sound Stone recorded the melody of the <%= sanctuaryDesc1[randomDesc1].sanctuaryDesc1 %> <%= sanctuaryDesc2[randomDesc2].sanctuaryDesc2 %>.</strong></p>
+    
 <% include partials/footer %>
