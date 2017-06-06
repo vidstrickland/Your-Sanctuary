@@ -8,7 +8,7 @@ var express         = require("express"),
     methodOverride  = require("method-override");
 
 //requiring routes
-var indexRoutes = require("./routes/index");
+var indexRoutes = require("./routes/index.js");
 
 
 app.use(bodyParser.urlencoded({extended:true}));
