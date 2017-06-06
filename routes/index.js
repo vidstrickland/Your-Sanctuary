@@ -5,7 +5,7 @@ var mongoose        = require("mongoose");
 //test
 
 //Root Route
-router.get("/landing", function(req, res){
+router.get("/", function(req, res){
     res.render("landing.ejs");
 });
 
