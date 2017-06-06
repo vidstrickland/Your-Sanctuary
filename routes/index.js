@@ -37,7 +37,7 @@ router.get("/admin", function(req, res){
 
 //admin logic
 router.post("/admin", function(req, res){
-    var newDesc1 = new sanctuaryDesc({
+    var newDesc1 = new sanctDescription({
         sanctuaryDesc1: req.body.sanctuaryDesc1,
         sanctuaryDesc2: req.body.sanctuaryDesc2,
     });
