@@ -3,7 +3,8 @@ var express         = require("express"),
     bodyParser      = require("body-parser"),
     flash           = require("connect-flash"),
     mongoose        = require("mongoose"),
-    sanctuaryDesc  = require("./models/sanctuaryDesc"),
+    sanctuaryDesc1  = require("./models/sanctuaryDesc1"),
+    sanctuaryDesc2  = require("./models/sanctuaryDesc2"),
     methodOverride  = require("method-override");
 
 //requiring routes
